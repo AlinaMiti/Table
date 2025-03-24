@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/main.cpp.o -c /home/s23380424@unn.global/Tablee/Table/main.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/main.cpp"
+},
+{
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/TabRecord.cpp.o -c /home/s23380424@unn.global/Tablee/Table/TabRecord.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/TabRecord.cpp"
+}
+]
