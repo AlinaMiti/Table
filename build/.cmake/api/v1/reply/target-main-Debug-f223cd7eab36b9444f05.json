@@ -42,7 +42,10 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -76,7 +79,10 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -92,6 +98,24 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "TabRecord.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ArrayTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ScanTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "TableTestKit.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

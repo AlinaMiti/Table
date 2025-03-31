@@ -129,6 +129,54 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+ArrayTable.o: ArrayTable.cpp.o
+.PHONY : ArrayTable.o
+
+# target to build an object file
+ArrayTable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ArrayTable.cpp.o
+.PHONY : ArrayTable.cpp.o
+
+ArrayTable.i: ArrayTable.cpp.i
+.PHONY : ArrayTable.i
+
+# target to preprocess a source file
+ArrayTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ArrayTable.cpp.i
+.PHONY : ArrayTable.cpp.i
+
+ArrayTable.s: ArrayTable.cpp.s
+.PHONY : ArrayTable.s
+
+# target to generate assembly for a file
+ArrayTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ArrayTable.cpp.s
+.PHONY : ArrayTable.cpp.s
+
+ScanTable.o: ScanTable.cpp.o
+.PHONY : ScanTable.o
+
+# target to build an object file
+ScanTable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ScanTable.cpp.o
+.PHONY : ScanTable.cpp.o
+
+ScanTable.i: ScanTable.cpp.i
+.PHONY : ScanTable.i
+
+# target to preprocess a source file
+ScanTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ScanTable.cpp.i
+.PHONY : ScanTable.cpp.i
+
+ScanTable.s: ScanTable.cpp.s
+.PHONY : ScanTable.s
+
+# target to generate assembly for a file
+ScanTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ScanTable.cpp.s
+.PHONY : ScanTable.cpp.s
+
 TabRecord.o: TabRecord.cpp.o
 .PHONY : TabRecord.o
 
@@ -152,6 +200,30 @@ TabRecord.s: TabRecord.cpp.s
 TabRecord.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/TabRecord.cpp.s
 .PHONY : TabRecord.cpp.s
+
+TableTestKit.o: TableTestKit.cpp.o
+.PHONY : TableTestKit.o
+
+# target to build an object file
+TableTestKit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/TableTestKit.cpp.o
+.PHONY : TableTestKit.cpp.o
+
+TableTestKit.i: TableTestKit.cpp.i
+.PHONY : TableTestKit.i
+
+# target to preprocess a source file
+TableTestKit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/TableTestKit.cpp.i
+.PHONY : TableTestKit.cpp.i
+
+TableTestKit.s: TableTestKit.cpp.s
+.PHONY : TableTestKit.s
+
+# target to generate assembly for a file
+TableTestKit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/TableTestKit.cpp.s
+.PHONY : TableTestKit.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -186,9 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... ArrayTable.o"
+	@echo "... ArrayTable.i"
+	@echo "... ArrayTable.s"
+	@echo "... ScanTable.o"
+	@echo "... ScanTable.i"
+	@echo "... ScanTable.s"
 	@echo "... TabRecord.o"
 	@echo "... TabRecord.i"
 	@echo "... TabRecord.s"
+	@echo "... TableTestKit.o"
+	@echo "... TableTestKit.i"
+	@echo "... TableTestKit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

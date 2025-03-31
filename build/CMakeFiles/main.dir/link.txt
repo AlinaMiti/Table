@@ -1,1 +1,1 @@
-/usr/bin/g++-12 -g CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/TabRecord.cpp.o -o main 
+/usr/bin/g++-12 -g CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/TabRecord.cpp.o CMakeFiles/main.dir/ArrayTable.cpp.o CMakeFiles/main.dir/ScanTable.cpp.o CMakeFiles/main.dir/TableTestKit.cpp.o -o main 

@@ -8,5 +8,20 @@
   "directory": "/home/s23380424@unn.global/Tablee/Table/build",
   "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/TabRecord.cpp.o -c /home/s23380424@unn.global/Tablee/Table/TabRecord.cpp",
   "file": "/home/s23380424@unn.global/Tablee/Table/TabRecord.cpp"
+},
+{
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/ArrayTable.cpp.o -c /home/s23380424@unn.global/Tablee/Table/ArrayTable.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/ArrayTable.cpp"
+},
+{
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/ScanTable.cpp.o -c /home/s23380424@unn.global/Tablee/Table/ScanTable.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/ScanTable.cpp"
+},
+{
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/TableTestKit.cpp.o -c /home/s23380424@unn.global/Tablee/Table/TableTestKit.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/TableTestKit.cpp"
 }
 ]

@@ -97,19 +97,67 @@ CMakeFiles/main.dir/TabRecord.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/TabRecord.cpp.s"
 	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/s23380424@unn.global/Tablee/Table/TabRecord.cpp -o CMakeFiles/main.dir/TabRecord.cpp.s
 
+CMakeFiles/main.dir/ArrayTable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/ArrayTable.cpp.o: ../ArrayTable.cpp
+CMakeFiles/main.dir/ArrayTable.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/s23380424@unn.global/Tablee/Table/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/ArrayTable.cpp.o"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/ArrayTable.cpp.o -MF CMakeFiles/main.dir/ArrayTable.cpp.o.d -o CMakeFiles/main.dir/ArrayTable.cpp.o -c /home/s23380424@unn.global/Tablee/Table/ArrayTable.cpp
+
+CMakeFiles/main.dir/ArrayTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/ArrayTable.cpp.i"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/s23380424@unn.global/Tablee/Table/ArrayTable.cpp > CMakeFiles/main.dir/ArrayTable.cpp.i
+
+CMakeFiles/main.dir/ArrayTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/ArrayTable.cpp.s"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/s23380424@unn.global/Tablee/Table/ArrayTable.cpp -o CMakeFiles/main.dir/ArrayTable.cpp.s
+
+CMakeFiles/main.dir/ScanTable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/ScanTable.cpp.o: ../ScanTable.cpp
+CMakeFiles/main.dir/ScanTable.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/s23380424@unn.global/Tablee/Table/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/ScanTable.cpp.o"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/ScanTable.cpp.o -MF CMakeFiles/main.dir/ScanTable.cpp.o.d -o CMakeFiles/main.dir/ScanTable.cpp.o -c /home/s23380424@unn.global/Tablee/Table/ScanTable.cpp
+
+CMakeFiles/main.dir/ScanTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/ScanTable.cpp.i"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/s23380424@unn.global/Tablee/Table/ScanTable.cpp > CMakeFiles/main.dir/ScanTable.cpp.i
+
+CMakeFiles/main.dir/ScanTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/ScanTable.cpp.s"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/s23380424@unn.global/Tablee/Table/ScanTable.cpp -o CMakeFiles/main.dir/ScanTable.cpp.s
+
+CMakeFiles/main.dir/TableTestKit.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/TableTestKit.cpp.o: ../TableTestKit.cpp
+CMakeFiles/main.dir/TableTestKit.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/s23380424@unn.global/Tablee/Table/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/TableTestKit.cpp.o"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/TableTestKit.cpp.o -MF CMakeFiles/main.dir/TableTestKit.cpp.o.d -o CMakeFiles/main.dir/TableTestKit.cpp.o -c /home/s23380424@unn.global/Tablee/Table/TableTestKit.cpp
+
+CMakeFiles/main.dir/TableTestKit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/TableTestKit.cpp.i"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/s23380424@unn.global/Tablee/Table/TableTestKit.cpp > CMakeFiles/main.dir/TableTestKit.cpp.i
+
+CMakeFiles/main.dir/TableTestKit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/TableTestKit.cpp.s"
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/s23380424@unn.global/Tablee/Table/TableTestKit.cpp -o CMakeFiles/main.dir/TableTestKit.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/TabRecord.cpp.o"
+"CMakeFiles/main.dir/TabRecord.cpp.o" \
+"CMakeFiles/main.dir/ArrayTable.cpp.o" \
+"CMakeFiles/main.dir/ScanTable.cpp.o" \
+"CMakeFiles/main.dir/TableTestKit.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/TabRecord.cpp.o
+main: CMakeFiles/main.dir/ArrayTable.cpp.o
+main: CMakeFiles/main.dir/ScanTable.cpp.o
+main: CMakeFiles/main.dir/TableTestKit.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/s23380424@unn.global/Tablee/Table/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/s23380424@unn.global/Tablee/Table/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
