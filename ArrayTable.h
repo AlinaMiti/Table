@@ -54,5 +54,5 @@ public:
         return _curPos;
     }
 
-
+    friend class SortTable;
 };
