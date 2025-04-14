@@ -36,9 +36,11 @@ void SortTable::InsertSort(PTabRecord* pMem, size_t count){
 }
 
 void SortTable::MergeSort(PTabRecord* pMem, size_t count){
-
+    
 }
-void SortTable::MergeSorter(PTabRecord* &pData, PTabRecord* &pBuf, size_t count){}
+void SortTable::MergeSorter(PTabRecord* &pData, PTabRecord* &pBuf, size_t count){
+    
+}
 void SortTable::MergeData(PTabRecord* &pData, PTabRecord* &pBuf, size_t n1, size_t n2){}
 
 void SortTable::QuickSort(PTabRecord* pMem, size_t count){}
@@ -71,7 +73,7 @@ void SortTable::InsRecord(const Key& key, PDatValue value){
         _records[i] = _records[i-1];
 
     }
-    _records[_curPos] = new TabRecord(key, value);
+    //_records[_curPos] = new TabRecord(key, value);
     _dataCount++;
     _curPos = 0;
 }

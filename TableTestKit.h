@@ -7,7 +7,7 @@ private:
 public:
     TableTestKit(Table& table); //через двоеточие присвоить ссылке
 
-    void FillTable();  
+    void FillTable();  //Руками талицу заполнить
 
     void GenBenchmarkTab();  //Benchmark алгоритм проверки. у нас генерация рандом таблицы 
     void ShowTable(); //печать таблицы
