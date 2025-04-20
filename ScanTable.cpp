@@ -9,7 +9,7 @@ void ScanTable::InsRecord(const Key& key, PDatValue value){
         throw "Table is full";
     }
     else{
-        //_records[_dataCount] = new TabRecord(key, value);  //нужно определить Принт из DatValue. И использовать уже другой класс
+        _records[_dataCount] = new TabRecord(key, value);  //нужно определить Принт из DatValue. И использовать уже другой класс
         _dataCount++;
     }
 

@@ -8,9 +8,7 @@ protected:
     virtual void Print(std::ostream& os) const = 0;
 
 public:
-    DatValue(){
-
-    }
+    DatValue(){}
     virtual DatValue* GetCopy() = 0;
 
     friend std::ostream& operator<<(std::ostream& os, const DatValue& dv){
