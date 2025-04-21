@@ -35,16 +35,88 @@ void SortTable::InsertSort(PTabRecord* pMem, size_t count){
     }
 }
 
-void SortTable::MergeSort(PTabRecord* pMem, size_t count){
-    
+void SortTable::MergeSort(PTabRecord* pMem, size_t count){  //алгоритм деления 
+    PTabRecord* pData = _records;
+    PTabRecord* pBuff = new PTabRecord[_dataCount]; //буфер для отсортированных элементов
+    PTabRecord* pTmp = pBuff;
+    MergeSorter(pData, pBuff, _dataCount);
+    if(pData == pTmp){
+        for(size_t i = 0; i < _dataCount; i++){
+            pBuff[i] = pData[i];
+        }
+    }
+    delete pTmp;
 }
-void SortTable::MergeSorter(PTabRecord* &pData, PTabRecord* &pBuf, size_t count){
-    
-}
-void SortTable::MergeData(PTabRecord* &pData, PTabRecord* &pBuf, size_t n1, size_t n2){}
 
-void SortTable::QuickSort(PTabRecord* pMem, size_t count){}
-void SortTable::QuickSplit(PTabRecord* pMem, size_t size, size_t& pivot){}
+void SortTable::MergeSorter(PTabRecord* &pData, PTabRecord* &pBuf, size_t count){
+    size_t n1 = (count + 1)/2;
+    size_t n2 = count - n1;
+    if(count > 2){
+        PTabRecord *pData2 = pData + n1;
+        PTabRecord *pBuf2 = pBuf + n1;
+        MergeSorter(pData, pBuf, n1);
+        MergeSorter(pData2, pBuf2, n2);
+    }
+    MergeData(pData, pBuf, n1, n2);
+}
+
+void SortTable::MergeData(PTabRecord* &pData, PTabRecord* &pBuf, size_t n1, size_t n2){
+    size_t i = 0, i1 = 0, i2 = 0;
+    PTabRecord *pDat1 = pData, *pDat2 = pData + n1;
+    while(i1 < n1 && i2 < n2){
+        if(pDat1[i1] -> _key < pDat2[i2] -> _key){
+            pBuf[i++] = pDat1[i1++];
+        }
+        else{
+            pBuf[i++] = pDat2[i2++];
+        }
+    }
+
+    while(i1 < n1) {
+        pBuf[i++] = pDat1[i1++];
+    }
+    while(i2 < n2) {
+        pBuf[i++] = pDat2[i2++];
+    }
+    pData = pBuf;
+    pBuf = pDat1;
+    _efficientcy += n1 + n2; 
+}
+
+void SortTable::QuickSort(PTabRecord* pMem, size_t count){
+    size_t pivot;
+    size_t n1, n2;
+    if(count > 1){
+        QuickSplit(pMem, count, pivot);
+        n1 = pivot + 1;
+        n2 = count - n1;
+        QuickSort(pMem, n1-1);
+        QuickSort(pMem + n1, n2);
+    }
+}
+
+void SortTable::QuickSplit(PTabRecord* pMem, size_t size, size_t& pivot){
+    PTabRecord pPivot = pMem[0];
+    PTabRecord pTmp;
+    size_t i1 = 1, i2 = size - 1;
+    while(i1 <= i2){
+        while(i1 < size && !(pMem[i1] -> _key > pPivot->_key)){
+            i1++;
+        }
+        while(pMem[i2]->_key > pPivot->_key){
+            i2--;
+        }
+        if(i1 < i2){
+            pTmp = pMem[i1];
+            pMem[i1] = pMem[i2];
+            pMem[i2] = pTmp;
+        }
+    } 
+    _efficientcy += size;
+    pivot = i2;
+    pMem[0] = pMem[i2];
+    pMem[i2] = pPivot;
+}
 
 SortTable& SortTable::operator=(const ScanTable& st){
     if(_records != nullptr){

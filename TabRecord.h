@@ -27,6 +27,6 @@ public:
     friend class SortTable;
 
     void Print(std::ostream &os)const override{
-        os << "data: "<< _data << ",  key: " << _key << std::endl;
+        os << "data: "<< _data << ", key: " << _key << std::endl;
     }
 };
