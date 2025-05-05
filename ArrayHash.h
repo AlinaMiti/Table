@@ -17,9 +17,9 @@ public:
     ~ArrayHash();
 
     bool IsFull();
-    PDatValue FindRecord(Key key);
-    void InsRecord(const Key& key, PDatValue value) override;
-    void DelRecord(const Key& key) override;
+    PDatValue FindRecord(Key key);    //поиск по ключу
+    void InsRecord(const Key& key, PDatValue value) override;  //добавление записи
+    void DelRecord(const Key& key) override;  //удаление записи
 
     //Навигация
     
