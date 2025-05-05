@@ -6,9 +6,9 @@ protected:
     size_t _tabSize; 
     size_t _curPos; 
     PTabRecord* _records;
-    size_t _freePos;
+    int _freePos;  //первое пустое место где можно поставить элемент
     size_t _hashStep; //хранение шага для проходки по таблицам(счетчик сдвига)
-    PTabRecord _mark; //пометка
+    PTabRecord _mark; //пометка (удаленные ранее элементы)
     size_t GetNextPos(size_t pos){ //переход на слдщ элемент если прошлый занят
         return (pos + _hashStep) % _tabSize;
     }
@@ -23,8 +23,8 @@ public:
 
     //Навигация
     
-    bool Reset() override;  
-    bool IsTabEnded() const override;
+    bool Reset() override;    //сбрасывает на стартовую позицию
+    bool IsTabEnded() const override; //находимся ли мы в конце таблицы
     bool GoNext() override;
     
     Key GetKey() const override;
