@@ -15,7 +15,7 @@ public:
     void SetData(PDatValue data);
     PDatValue GetData() const;
 
-    virtual PDatValue GetCopy();
+    virtual PDatValue GetCopy()override;
     TabRecord& operator=(const TabRecord& tr);
 
     virtual bool operator==(const TabRecord& tr) const; 

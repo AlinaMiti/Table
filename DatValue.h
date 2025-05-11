@@ -17,7 +17,12 @@ public:
         }
         return os;
     }
+
+    virtual bool operator==(const DatValue& dv) const{
+        return false;
+    }
+
+    virtual ~DatValue() {}
 };
 
-//typedef DatValue* PDatValue;
 using PDatValue = DatValue*;

@@ -1,7 +1,14 @@
 #include "ScanTable.h"
 
 PDatValue ScanTable::FindRecord(const Key& key){
-
+    _efficientcy = 0;
+    for(size_t i = 0; i < _dataCount; i++){
+        _efficientcy++;
+        if(_records[i]->GetKey() == key){
+            return _records[i]->GetData();
+        }
+    }
+    return nullptr;
 }
 
 void ScanTable::InsRecord(const Key& key, PDatValue value){
@@ -9,7 +16,7 @@ void ScanTable::InsRecord(const Key& key, PDatValue value){
         throw "Table is full";
     }
     else{
-        //_records[_dataCount] = new TabRecord(key, value);  //нужно определить Принт из DatValue. И использовать уже другой класс
+        _records[_dataCount] = new TabRecord(key, value);  //нужно определить Принт из DatValue. И использовать уже другой класс
         _dataCount++;
     }
 
