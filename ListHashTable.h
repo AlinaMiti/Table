@@ -1,12 +1,15 @@
 #include <forward_list> 
+#include <list> 
 #include "HashTable.h"
 #include "ArrayHash.h"
 
 class ListHashTable : public HashTable{
 private:
     size_t _tabSize;
-    size_t _curList;
-    std::forward_list<PTabRecord>* _lists; //массив списков
+    size_t _curPos; //позиция в списке
+    size_t _curList;  //текущая позиция в массиве
+    std::list<PTabRecord>* _lists; //массив списков
+    std::list<PTabRecord>::iterator _curElem;
 public:
     ListHashTable(size_t tabSize);
     ~ListHashTable();

@@ -2,6 +2,8 @@
 #include <random>
 #include <sstream>
 #include <forward_list>
+#include "Table.h"
+#include "Marks.h"
 
 void Merge(int* array, int left, int mid, int right);
 void MergeSort( int* array, int left, int right){
@@ -60,18 +62,10 @@ void Merge(int* array, int left, int mid, int right){
 
 
 int main(){
+    
 
-    int arr[9] = {2, 3, 66, 5, 3, 4, 1, 6665, 5};
-    MergeSort(arr, 0, 8);
-    for (size_t i = 0 ; i < 9; i++){
-        std::cout << arr[i];
-    }
-
-    // srand(time(nullptr));
-    // int* array = new int[10];
-    // for(int i = 0; i < 10; i++){
-    //     array[i] = rand() % 100000;
-    // }
+    //Print(5, 4, 3, 4, 5);
+    
     
     return 0;
 }
