@@ -1,6 +1,11 @@
 #pragma once
 #include "Table.h"
 #include "DatValue.h"
+#include "Marks.h"
+#include <sstream>
+#include <string>
+#include <sstream>
+#include <fstream>
 #include <random>
 #include <chrono>
 

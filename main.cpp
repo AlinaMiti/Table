@@ -4,6 +4,11 @@
 #include <forward_list>
 #include "Table.h"
 #include "Marks.h"
+#include <fstream>
+#include <string>
+#include "TableTestKit.h"
+#include "ArrayTable.h"
+#include "DatValue.h"
 
 void Merge(int* array, int left, int mid, int right);
 void MergeSort( int* array, int left, int right){
@@ -63,9 +68,29 @@ void Merge(int* array, int left, int mid, int right){
 
 int main(){
     
-
-    //Print(5, 4, 3, 4, 5);
+    // Marks* marks = new Marks(5, 4, 5, 3, 5);
+    // std::cout << "Marks: " << *marks << std::endl; 
+    // delete marks;
     
+
+    std::ofstream outputFile("marks.txt");
+    if (!outputFile.is_open()) {
+        std::cerr << "Ошибка: Не удалось создать файл 'marks.txt'" << std::endl;
+        return 1;
+    }
+
+    outputFile << "student1,5,4,5,3,4\n";
+    outputFile << "student2,4,5,4,4,5\n";
+    outputFile << "student3,5,5,5,5,5\n";
+    outputFile.close();
+    
+    ArrayTable table;
+    TableTestKit testKit(table);
+    testKit.FillTable();
+
+    // 5. Вывод содержимого таблицы для проверки
+    std::cout << "Содержимое таблицы после заполнения:" << std::endl;
+    testKit.ShowTable();
     
     return 0;
 }

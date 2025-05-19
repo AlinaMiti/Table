@@ -1,6 +1,6 @@
 #include "TabRecord.h"
 
-TabRecord::TabRecord(Key key = "", PDatValue data = nullptr): _key(key), _data(data){}
+TabRecord::TabRecord(Key key, PDatValue data): _key(key), _data(data){}
 
 void TabRecord::SetKey(Key key){
     _key = key;

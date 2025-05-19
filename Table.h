@@ -1,4 +1,5 @@
 #include <iostream>
+#pragma once
 #include "TabRecord.h"
 #include "DatValue.h"
 

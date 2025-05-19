@@ -3,16 +3,39 @@
 TableTestKit::TableTestKit(Table& table): table(table){}
 
 void TableTestKit::FillTable(){
-    std::cout << "Enter key-value pairs, type 'end' to finish:" << std::endl;
-    Key key;
-    PDatValue value;
-    while(true){
-        std::cout << "Enter key (or 'end'): ";
-        std::cin >> key;
-            if (key == "end") break;
-        std::cout << "Enter value: ";
-        //std::cin >> &value;
+    std::string filename;
+    std::cout << "Введите имя файла для заполнения таблицы: ";
+    std::cin >> filename;
+
+    std::ifstream inputFile(filename);
+    if (!inputFile.is_open()) {
+        std::cerr << "Ошибка: Не удалось открыть файл '" << filename << "'" << std::endl;
+        return;
     }
+
+    std::string line;
+    while (std::getline(inputFile, line)) {
+        std::stringstream ss(line);
+        std::string key;
+        int math, physics, sport, psychology, history;
+        char delimiter; // Для хранения разделителей
+
+        if (std::getline(ss, key, ',') &&
+            ss >> math >> delimiter && delimiter == ',' &&
+            ss >> physics >> delimiter && delimiter == ',' &&
+            ss >> sport >> delimiter && delimiter == ',' &&
+            ss >> psychology >> delimiter && delimiter == ',' &&
+            ss >> history) {
+
+            PDatValue datValue = new Marks(math, physics, sport, psychology, history);
+            table.InsRecord(key, datValue);
+        } else {
+            std::cerr << "Предупреждение: Неверный формат строки в файле: '" << line << "'" << std::endl;
+        }
+    }
+
+    inputFile.close();
+    std::cout << "Таблица заполнена из файла '" << filename << "'" << std::endl;
 }
 
 void TableTestKit::GenBenchmarkTab(){};

@@ -28,31 +28,40 @@ public:
     }
 
     //Информационные методы
-    virtual bool IsFull() const{
+    virtual bool IsFull() const override{
         return _dataCount >= _tabSize;
     }
-    size_t GetTabSize() const{
+    size_t GetTabSize() const {
         return _tabSize;
     }
-    virtual Key GetKey() const{
+    virtual Key GetKey() const override{
         return GetKey(Current);
     }
-    virtual PDatValue GetValuePtr() const{ //возврат текущей записи
+    virtual PDatValue GetValuePtr() { //возврат текущей записи
+        return GetValuePtr(DataPos::Current);
+    }
+//
+    virtual PDatValue GetValue() const override{ //возврат текущей записи
         return GetValuePtr(DataPos::Current);
     }
 
     virtual Key GetKey(DataPos position) const; //возврат значения ключа
-    virtual PDatValue GetValuePtr(DataPos position) const;
+    virtual PDatValue GetValuePtr(DataPos position) const ;
 
     //методы навигации
-    virtual bool Reset();  //сброс текущего положения на начало
-    virtual bool IsTabEnded() const;  //дошли ли до последней записи
-    virtual bool GoNext();  //переместиться на следщ запись
+    virtual bool Reset() override;  //сброс текущего положения на начало
+    virtual bool IsTabEnded() const override;  //дошли ли до последней записи
+    virtual bool GoNext() override;  //переместиться на следщ запись
 
     virtual bool SetCurrentPos(size_t pos); //устанавливает CurrentPos
     size_t GetCurrentPos() const{
         return _curPos;
     }
+
+    //
+    virtual PDatValue FindRecord(const Key& key) override;
+    virtual void InsRecord(const Key& key, PDatValue value) override; 
+    virtual void DelRecord(const Key& key) override;
 
     friend class SortTable;
 };
