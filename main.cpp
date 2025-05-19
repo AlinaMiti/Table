@@ -75,7 +75,7 @@ int main(){
 
     std::ofstream outputFile("marks.txt");
     if (!outputFile.is_open()) {
-        std::cerr << "Ошибка: Не удалось создать файл 'marks.txt'" << std::endl;
+        std::cerr << "Не удалось создать файл 'marks.txt'" << std::endl;
         return 1;
     }
 
@@ -84,13 +84,12 @@ int main(){
     outputFile << "student3,5,5,5,5,5\n";
     outputFile.close();
     
-    ArrayTable table;
-    TableTestKit testKit(table);
-    testKit.FillTable();
+    // ArrayTable table;
+    // TableTestKit testKit(table);
+    // testKit.FillTable();
 
-    // 5. Вывод содержимого таблицы для проверки
-    std::cout << "Содержимое таблицы после заполнения:" << std::endl;
-    testKit.ShowTable();
+    // std::cout << "Содержимое таблицы после заполнения:" << std::endl;
+    // testKit.ShowTable();
     
     return 0;
 }

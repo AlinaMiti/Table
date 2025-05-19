@@ -1,32 +1,27 @@
 [
 {
-  "directory": "D:/Table/build",
-  "command": "C:\\Users\\alina\\Downloads\\x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\main.cpp.obj -c D:\\Table\\main.cpp",
-  "file": "D:/Table/main.cpp",
-  "output": "CMakeFiles/main.dir/main.cpp.obj"
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/main.cpp.o -c /home/s23380424@unn.global/Tablee/Table/main.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/main.cpp"
 },
 {
-  "directory": "D:/Table/build",
-  "command": "C:\\Users\\alina\\Downloads\\x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\TabRecord.cpp.obj -c D:\\Table\\TabRecord.cpp",
-  "file": "D:/Table/TabRecord.cpp",
-  "output": "CMakeFiles/main.dir/TabRecord.cpp.obj"
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/TabRecord.cpp.o -c /home/s23380424@unn.global/Tablee/Table/TabRecord.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/TabRecord.cpp"
 },
 {
-  "directory": "D:/Table/build",
-  "command": "C:\\Users\\alina\\Downloads\\x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\ArrayTable.cpp.obj -c D:\\Table\\ArrayTable.cpp",
-  "file": "D:/Table/ArrayTable.cpp",
-  "output": "CMakeFiles/main.dir/ArrayTable.cpp.obj"
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/ArrayTable.cpp.o -c /home/s23380424@unn.global/Tablee/Table/ArrayTable.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/ArrayTable.cpp"
 },
 {
-  "directory": "D:/Table/build",
-  "command": "C:\\Users\\alina\\Downloads\\x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\ScanTable.cpp.obj -c D:\\Table\\ScanTable.cpp",
-  "file": "D:/Table/ScanTable.cpp",
-  "output": "CMakeFiles/main.dir/ScanTable.cpp.obj"
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/ScanTable.cpp.o -c /home/s23380424@unn.global/Tablee/Table/ScanTable.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/ScanTable.cpp"
 },
 {
-  "directory": "D:/Table/build",
-  "command": "C:\\Users\\alina\\Downloads\\x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\TableTestKit.cpp.obj -c D:\\Table\\TableTestKit.cpp",
-  "file": "D:/Table/TableTestKit.cpp",
-  "output": "CMakeFiles/main.dir/TableTestKit.cpp.obj"
+  "directory": "/home/s23380424@unn.global/Tablee/Table/build",
+  "command": "/usr/bin/g++-12   -g -o CMakeFiles/main.dir/TableTestKit.cpp.o -c /home/s23380424@unn.global/Tablee/Table/TableTestKit.cpp",
+  "file": "/home/s23380424@unn.global/Tablee/Table/TableTestKit.cpp"
 }
 ]

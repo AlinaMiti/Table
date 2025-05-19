@@ -185,4 +185,17 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/forward_list \
  /usr/include/c++/12/bits/forward_list.h \
  /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/forward_list.tcc
+ /usr/include/c++/12/bits/forward_list.tcc \
+ /home/s23380424@unn.global/Tablee/Table/Table.h \
+ /home/s23380424@unn.global/Tablee/Table/TabRecord.h \
+ /home/s23380424@unn.global/Tablee/Table/DatValue.h \
+ /home/s23380424@unn.global/Tablee/Table/Marks.h \
+ /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc \
+ /home/s23380424@unn.global/Tablee/Table/TableTestKit.h \
+ /usr/include/c++/12/chrono /usr/include/c++/12/bits/chrono.h \
+ /usr/include/c++/12/ratio /usr/include/c++/12/ctime \
+ /usr/include/c++/12/bits/parse_numbers.h \
+ /home/s23380424@unn.global/Tablee/Table/ArrayTable.h
