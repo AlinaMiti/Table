@@ -59,9 +59,9 @@ public:
     }
 
     //
-    // virtual PDatValue FindRecord(const Key& key) override;
-    // virtual void InsRecord(const Key& key, PDatValue value) override; 
-    // virtual void DelRecord(const Key& key) override;
+    virtual PDatValue FindRecord(const Key& key) override;
+    virtual void InsRecord(const Key& key, PDatValue value) override; 
+    virtual void DelRecord(const Key& key) override;
 
     friend class SortTable;
 };

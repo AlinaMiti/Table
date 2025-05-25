@@ -23,6 +23,7 @@ void ScanTable::InsRecord(const Key& key, PDatValue value){
 }
 
 void ScanTable::DelRecord(const Key& key){
+   
     PDatValue tmp = FindRecord(key);//поиск ключа
     if(tmp == nullptr){
         throw "This elem not found";

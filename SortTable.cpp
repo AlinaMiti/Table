@@ -135,7 +135,31 @@ SortTable& SortTable::operator=(const ScanTable& st){
     return *this;
 }
 
-PDatValue SortTable::FindRecord(const Key& key){}   //бинарный поиск   //ДОМА СДЕЛАТЬ
+PDatValue SortTable::FindRecord(const Key& key){
+    _efficientcy = 0;
+    size_t left = 0;
+    size_t right = _dataCount;
+    
+    while (left < right) {
+        _efficientcy++;
+        size_t mid = left + (right - left) / 2;
+        
+        if (_records[mid]->GetKey() == key) {
+            _curPos = mid;
+            return _records[mid]->GetData();
+        }
+        else if (_records[mid]->GetKey() < key) {
+            left = mid + 1;
+        }
+        else {
+            right = mid;
+        }
+    }
+    
+    return nullptr;
+}   //бинарный поиск   ДОМА СДЕЛАТЬ
+
+
 void SortTable::InsRecord(const Key& key, PDatValue value){
     if (IsFull())
         throw "Table is full";

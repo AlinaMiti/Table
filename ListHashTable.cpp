@@ -84,3 +84,21 @@ void ListHashTable::DelRecord(const Key& key){
     _dataCount--;
     _lists[_curList].erase(_curElem);  
 }
+
+
+//
+PDatValue ListHashTable::FindRecord(Key key) {
+   
+    size_t hashIndex = HashFunc(key) % _tabSize;
+    
+    for (auto it = _lists[hashIndex].begin(); it != _lists[hashIndex].end(); ++it) {
+        if ((*it)->GetKey() == key) {
+            _curList = hashIndex;
+            _curElem = it;
+            return (*it)->GetData();
+        }
+    }
+    
+    return nullptr;
+}
+//

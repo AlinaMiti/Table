@@ -1,5 +1,7 @@
+#pragma once
 #include "TabRecord.h"
 
+class TreeNode;
 using PTreeNode = TreeNode*;
 
 class TreeNode : public TabRecord{

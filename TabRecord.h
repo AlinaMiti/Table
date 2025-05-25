@@ -1,6 +1,6 @@
 #pragma once
 #include "DatValue.h"
-
+#include <string>
 
 using Key = std::string;
 
@@ -27,6 +27,11 @@ public:
     friend class SortTable;
 
     void Print(std::ostream &os)const override{
-        os << "data: "<< _data << ", key: " << _key << std::endl;
+        os << "Key: " << _key << ", Data: ";
+        if (_data) {
+            os << *_data;
+        } else {
+            os << "null";
+        }
     }
 };

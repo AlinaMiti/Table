@@ -9,6 +9,7 @@
 #include "TableTestKit.h"
 #include "ArrayTable.h"
 #include "DatValue.h"
+#include "ScanTable.h"
 
 void Merge(int* array, int left, int mid, int right);
 void MergeSort( int* array, int left, int right){
@@ -72,24 +73,42 @@ int main(){
     // std::cout << "Marks: " << *marks << std::endl; 
     // delete marks;
     
+//
+    // std::ofstream outputFile("marks.txt");
+    // if (!outputFile.is_open()) {
+    //     std::cerr << "drrr" << std::endl;
+    //     return 1;
+    // }
 
-    std::ofstream outputFile("marks.txt");
-    if (!outputFile.is_open()) {
-        std::cerr << "Не удалось создать файл 'marks.txt'" << std::endl;
-        return 1;
-    }
-
-    outputFile << "student1,5,4,5,3,4\n";
-    outputFile << "student2,4,5,4,4,5\n";
-    outputFile << "student3,5,5,5,5,5\n";
-    outputFile.close();
-    
+    // outputFile << "student1,5,4,5,3,4\n";
+    // outputFile << "student2,4,5,4,4,5\n";
+    // outputFile << "student3,5,5,5,5,5\n";
+    // outputFile.close();
+   
     // ArrayTable table;
     // TableTestKit testKit(table);
     // testKit.FillTable();
 
-    // std::cout << "Содержимое таблицы после заполнения:" << std::endl;
-    // testKit.ShowTable();
     
+    // testKit.ShowTable();
+ //
+ 
+ 
+      //  
+        // ScanTable table(3);
+        
+        // table.InsRecord("student1", new Marks(5, 4, 3, 5, 4));
+        // table.InsRecord("student2", new Marks(3, 3, 4, 4, 5));
+        
+        // PDatValue val = table.FindRecord("student1");
+        // if(val) {
+        //     std::cout << "Found student1: " << *val << std::endl;
+        // }
+        
+        // table.DelRecord("student1");
+        // std::cout << table.GetDataCount() << std::endl;
+    // 
+
+
     return 0;
 }

@@ -4,12 +4,12 @@ TableTestKit::TableTestKit(Table& table): table(table){}
 
 void TableTestKit::FillTable(){
     std::string filename;
-    std::cout << "Имя файла для заполнения таблицы: ";
+    std::cout << "File name?: ";
     std::cin >> filename;
 
     std::ifstream inputFile(filename);
     if (!inputFile.is_open()) {
-        std::cerr << "Не удалось открыть файл '" << filename << "'" << std::endl;
+        std::cerr << "No open file '" << filename << "'" << std::endl;
         return;
     }
 
@@ -30,7 +30,7 @@ void TableTestKit::FillTable(){
             PDatValue datValue = new Marks(math, physics, sport, psychology, history);
             table.InsRecord(key, datValue);
         } else {
-            std::cerr << "Неверный формат строки в файле: '" << line << "'" << std::endl;
+            std::cerr << "Format noy: '" << line << "'" << std::endl;
         }
     }
 

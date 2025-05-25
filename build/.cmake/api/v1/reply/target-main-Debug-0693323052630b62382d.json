@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "main"
+			"path" : "main.exe"
+		},
+		{
+			"path" : "main.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -45,7 +48,12 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -61,12 +69,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "main",
-	"nameOnDisk" : "main",
+	"nameOnDisk" : "main.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -82,7 +94,12 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -116,6 +133,36 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "TableTestKit.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ArrayHash.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "HashTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ListHashTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "SortTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "TreeTable.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

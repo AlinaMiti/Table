@@ -45,12 +45,49 @@ bool ArrayTable::IsTabEnded() const{
 
 bool ArrayTable::GoNext(){
     if(!IsTabEnded()){
-        _curPos ++;
+        _curPos++;
     }
     return IsTabEnded();
 }
 
 bool ArrayTable::SetCurrentPos(size_t pos){
-    _curPos = pos < _dataCount ? pos : 0;
+    _curPos = (pos < _dataCount) ? pos : 0;
     return IsTabEnded();
 }
+
+//
+PDatValue ArrayTable::FindRecord(const Key& key) {
+    _efficientcy = 0;
+    for(size_t i = 0; i < _dataCount; i++) {
+        _efficientcy++;
+        if(_records[i]->GetKey() == key) {
+            _curPos = i;
+            return _records[i]->GetData();
+        }
+    }
+    return nullptr;
+}
+
+void ArrayTable::InsRecord(const Key& key, PDatValue value) {
+    if(IsFull()) {
+        throw "Table is full";
+    }
+    if(FindRecord(key) != nullptr) {
+        throw "Duplicate key";
+    }
+    _records[_dataCount++] = new TabRecord(key, value);
+}
+
+void ArrayTable::DelRecord(const Key& key) {
+    if(FindRecord(key) == nullptr) {
+        throw "Record not found";
+    }
+    
+    delete _records[_curPos];
+    
+    for(size_t i = _curPos; i < _dataCount - 1; i++) {
+        _records[i] = _records[i+1];
+    }
+    _records[--_dataCount] = nullptr;
+}
+//

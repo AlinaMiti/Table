@@ -62,3 +62,13 @@ void TreeTable::DelRecord(const Key& key){
     }
     delete pNode;
 }
+
+//
+void TreeTable::DeleteTreeTable(PTreeNode pNode) {
+    if (pNode != nullptr) {
+        DeleteTreeTable(pNode->GetLeft());
+        DeleteTreeTable(pNode->GetRight());
+        
+        delete pNode;
+    }
+}

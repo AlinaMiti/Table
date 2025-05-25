@@ -1,7 +1,7 @@
 #include "ArrayHash.h"
 
 
-ArrayHash::ArrayHash(size_t size = 100, size_t hashStep = 7) : HashTable(), _tabSize(size), _hashStep(hashStep){
+ArrayHash::ArrayHash(size_t size, size_t hashStep) : HashTable(), _tabSize(size), _hashStep(hashStep){
     _records = new PTabRecord[_tabSize];
     for(size_t i = 0; i < _tabSize; i++){
         _records[i] = nullptr;

@@ -1,3 +1,4 @@
+#pragma once
 #include "ScanTable.h"
 
 //3 вида сортировок/ 2 и 3 рекурсивные

@@ -1,3 +1,4 @@
+#pragma once
 #include "Table.h"
 #include "TreeNode.h"
 #include <stack>
@@ -43,9 +44,9 @@ public:
     void InsRecord(const Key& key, PDatValue value) override; 
     void DelRecord(const Key& key) override;
     
-    bool Reset() override;  //сброс текущего положения на начало
-    bool IsTabEnded() const override;  //дошли ли до последней записи
-    bool GoNext() override;  //переместиться на следщ запись
+    // bool Reset() override;  //сброс текущего положения на начало
+    // bool IsTabEnded() const override;  //дошли ли до последней записи
+    // bool GoNext() override;  //переместиться на следщ запись
 
     Key GetKey() const override;   //значение для текущей записи
     PDatValue GetValue() const override; 
