@@ -63,12 +63,108 @@ void TreeTable::DelRecord(const Key& key){
     delete pNode;
 }
 
-//
 void TreeTable::DeleteTreeTable(PTreeNode pNode) {
     if (pNode != nullptr) {
         DeleteTreeTable(pNode->GetLeft());
         DeleteTreeTable(pNode->GetRight());
         
         delete pNode;
+    }
+}
+
+bool TreeTable::Reset(){
+    PTreeNode pNode = _pCur = _pRoot;
+    while(!_stack.empty()){
+        _stack.pop();
+    }
+    _curPos = 0;
+    while (pNode != nullptr){
+        _stack.push(pNode);
+        _pCur = pNode;
+        pNode = pNode->GetLeft();
+    }
+    return IsTabEnded();
+}  
+
+bool TreeTable::IsTabEnded() const{
+    return _curPos >= _dataCount;
+} 
+
+bool TreeTable::GoNext(){
+    if(!IsTabEnded() && _pCur != nullptr){
+        _pCur = _pCur -> GetRight();
+        PTreeNode pNode = _pCur;
+        _stack.pop();
+        while(pNode != nullptr){
+            _stack.push(pNode);
+            _pCur = pNode;
+            pNode = pNode->GetLeft();
+        }
+        if(_pCur == nullptr && _stack.empty()){
+            _pCur = _stack.top();
+        }
+        _curPos++;
+    }
+    return IsTabEnded();
+}
+
+void TreeTable::PrintTreeTable(std::ostream &os, PTreeNode pNode){
+    if(pNode != nullptr){
+        PrintTreeTable(os, pNode->GetLeft());
+        pNode->Print(os);
+        std::cout << std::endl;
+        PrintTreeTable(os, pNode->GetRight());
+    }
+}
+
+void TreeTable::DrawTreeTable(PTreeNode pNode, size_t lvl){
+    if(pNode != nullptr){
+        DrawTreeTable(pNode->GetRight(), lvl + 1);
+        for(size_t i = 0; i < 2*lvl;i++){
+            std::cout << " ";
+        }
+        pNode -> Print(std::cout);
+        std::cout << std::endl;
+        DrawTreeTable(pNode->GetLeft(), lvl + 1);
+    }
+}
+
+void TreeTable::PutValues(PTreeNode pNode, size_t lvl){
+    if(pNode != nullptr && pos < 20){ //нам надо сделать больше 20 самостоятельно
+        PutValues(pNode ->GetLeft(), lvl+1);
+        _k[pos] = pNode->GetKey();
+        _t[pos] = lvl;
+        pos++;
+        PutValues(pNode ->GetRight(), lvl+1);
+    }
+}
+
+void TreeTable::Draw(){
+    std::cout << "Tree " << std::endl;
+    DrawTreeTable(_pRoot, 0);
+}
+
+void TreeTable::Show() {
+    size_t maxl = 0, i, j, k, pn;
+    pos = 0;
+    PutValues(_pRoot, 0);
+    for(i = 0; i < pos; i++){
+        if(maxl < _t[i]){
+            maxl = _t[i];
+        }
+    }
+    std::cout << "Tree table visualisation" << std::endl;
+    for(i = 0; i < maxl + 1; i++){
+        pn = 0;
+        for(j = 0; j < pos; j++){
+            if(i == _t[j]){
+                for(k = 0; k < 2*(j - pn); k++){
+                    std::cout << " "; 
+                }
+                std::cout << _k[j];
+                pn = j + 1;
+            }
+        }
+        std::cout << std::endl;
     }
 }

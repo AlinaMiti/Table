@@ -75,6 +75,8 @@
         "xloctime": "cpp",
         "xtr1common": "cpp",
         "fstream": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "map": "cpp",
+        "cinttypes": "cpp"
     }
 }

@@ -74,23 +74,23 @@ int main(){
     // delete marks;
     
 //
-    // std::ofstream outputFile("marks.txt");
-    // if (!outputFile.is_open()) {
-    //     std::cerr << "drrr" << std::endl;
-    //     return 1;
-    // }
+    std::ofstream outputFile("marks.txt");
+    if (!outputFile.is_open()) {
+        std::cerr << "drrr" << std::endl;
+        return 1;
+    }
 
-    // outputFile << "student1,5,4,5,3,4\n";
-    // outputFile << "student2,4,5,4,4,5\n";
-    // outputFile << "student3,5,5,5,5,5\n";
-    // outputFile.close();
+    outputFile << "student1,5,4,5,3,4\n";
+    outputFile << "student2,4,5,4,4,5\n";
+    outputFile << "student3,5,5,5,5,5\n";
+    outputFile.close();
    
-    // ArrayTable table;
-    // TableTestKit testKit(table);
-    // testKit.FillTable();
+    ArrayTable table;
+    TableTestKit testKit(table);
+    testKit.FillTable();
 
     
-    // testKit.ShowTable();
+    testKit.ShowTable();
  //
  
  
