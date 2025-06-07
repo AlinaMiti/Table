@@ -6,7 +6,6 @@
 
 class ListHashTable : public HashTable{
 private:
-    size_t _tabSize;
     size_t _curPos; //позиция в списке
     size_t _curList;  //текущая позиция в массиве
     std::list<PTabRecord>* _lists; //массив списков
@@ -14,9 +13,10 @@ private:
 public:
     ListHashTable(size_t tabSize);
     ~ListHashTable();
+    void InsRecord(const Key& key, PDatValue value, bool allowDuplicates = false);
 
-    bool IsFull();  //всегда false
-    PDatValue FindRecord(Key key);    //поиск по ключу
+    bool IsFull() const override;  //всегда false
+    PDatValue FindRecord(const Key& key) override;    //поиск по ключу
     void InsRecord(const Key& key, PDatValue value) override;  //добавление записи
     void DelRecord(const Key& key) override;  //удаление записи
 

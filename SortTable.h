@@ -1,5 +1,6 @@
 #pragma once
 #include "ScanTable.h"
+#include <stdexcept>
 
 //3 вида сортировок/ 2 и 3 рекурсивные
 enum SortMethod {Insert, Merge, Quick}; 
@@ -9,7 +10,7 @@ class SortTable : public ScanTable {
 protected:
     SortMethod _sortMethod; 
 
-    void SortData(); //запускает одну из сортировок
+   
     void InsertSort(PTabRecord* pMem, size_t count);   //сортировка вставками
 
     void MergeSort(PTabRecord* pMem, size_t count);
@@ -20,8 +21,18 @@ protected:
     void QuickSplit(PTabRecord* pMem, size_t size, size_t& pivot);
 
 public:
+    std::string GetSortMethodName() const {
+    switch (GetSortMethod()) {  
+        case Insert: return "Insertion Sort";
+        case Merge:  return "Merge Sort";
+        case Quick:  return "Quick Sort";
+        default:     return "Unknown";
+    }
+    }
+    void ResetEfficiency() { _efficientcy = 0; }
+    void SortData(); //запускает одну из сортировок
     SortTable(size_t tabSize = 25) : ScanTable(tabSize) {};
-    SortTable(const ScanTable& st) {  //конструктор преобразования типов
+    SortTable(const ScanTable& st) : ScanTable(st._tabSize), _sortMethod(SortMethod::Insert){  //конструктор преобразования типов
         *this = st;
     }
     SortTable& operator=(const ScanTable& st); //оператор присваивания

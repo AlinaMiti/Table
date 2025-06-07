@@ -10,61 +10,63 @@
 #include "ArrayTable.h"
 #include "DatValue.h"
 #include "ScanTable.h"
+#include "SortTable.h"
+#include "ListHashTable.h"
 
-void Merge(int* array, int left, int mid, int right);
-void MergeSort( int* array, int left, int right){
-    if(left < right){
-        int mid = (right - left)/2 + left;
-        MergeSort(array, left, mid);
-        MergeSort(array, mid + 1, right);
+// void Merge(int* array, int left, int mid, int right);
+// void MergeSort( int* array, int left, int right){
+//     if(left < right){
+//         int mid = (right - left)/2 + left;
+//         MergeSort(array, left, mid);
+//         MergeSort(array, mid + 1, right);
 
-        Merge(array, left, mid, right);
-    }
+//         Merge(array, left, mid, right);
+//     }
     
-}
+// }
 
-void Merge(int* array, int left, int mid, int right){
-    size_t s1 = mid - left + 1;
-    size_t s2 = right - mid;
+// void Merge(int* array, int left, int mid, int right){
+//     size_t s1 = mid - left + 1;
+//     size_t s2 = right - mid;
 
-    int* left_array = new int[s1];
-    int* right_array = new int[s2];
+//     int* left_array = new int[s1];
+//     int* right_array = new int[s2];
 
-    for (size_t i = 0; i < s1; i++){
-        left_array[i] = array[i + left];
-    }
-    for (size_t i = 0; i < s2; i++){
-        right_array[i] = array[i + mid + 1];
-    }
+//     for (size_t i = 0; i < s1; i++){
+//         left_array[i] = array[i + left];
+//     }
+//     for (size_t i = 0; i < s2; i++){
+//         right_array[i] = array[i + mid + 1];
+//     }
 
-    size_t i = 0, j = 0, k = left;
-    while(i < s1 && j < s2){
-        if(left_array[i] <= right_array[j]){
-            array[k] = left_array[i];
-            i++;
-        }
-        else{
-            array[k] = right_array[j];
-            j++;
-        }
-        k++;
-    }
+//     size_t i = 0, j = 0, k = left;
+//     while(i < s1 && j < s2){
+//         if(left_array[i] <= right_array[j]){
+//             array[k] = left_array[i];
+//             i++;
+//         }
+//         else{
+//             array[k] = right_array[j];
+//             j++;
+//         }
+//         k++;
+//     }
 
-    while(i < s1){
-        array[k] = left_array[i];
-        i++;
-        k++;
-    }
-    while(i < s2){
-        array[k] = right_array[j];
-        j++;
-        k++;
-    }
-    delete [] left_array;
-    delete [] right_array;
+//     while(i < s1){
+//         array[k] = left_array[i];
+//         i++;
+//         k++;
+//     }
+//     while(i < s2){
+//         array[k] = right_array[j];
+//         j++;
+//         k++;
+//     }
+//     delete [] left_array;
+//     delete [] right_array;
 
     
-}
+// }
 
 
 int main(){
@@ -73,26 +75,7 @@ int main(){
     // std::cout << "Marks: " << *marks << std::endl; 
     // delete marks;
     
-//
-    std::ofstream outputFile("marks.txt");
-    if (!outputFile.is_open()) {
-        std::cerr << "drrr" << std::endl;
-        return 1;
-    }
 
-    outputFile << "student1,5,4,5,3,4\n";
-    outputFile << "student2,4,5,4,4,5\n";
-    outputFile << "student3,5,5,5,5,5\n";
-    outputFile.close();
-   
-    ArrayTable table;
-    TableTestKit testKit(table);
-    testKit.FillTable();
-
-    
-    testKit.ShowTable();
- //
- 
  
       //  
         // ScanTable table(3);
@@ -110,5 +93,58 @@ int main(){
     // 
 
 
-    return 0;
+
+    // ScanTable scanTable(5000);
+    // TableTestKit tester(scanTable);
+    // tester.GenBenchmarkTab(); 
+    // tester.FillTable();       
+    // tester.FindRecord();      
+    // tester.DeleteRecord();    
+    // tester.PrintMetrics();
+
+  //
+  //СОРТИРОВКА
+  // ScanTable sourceTable(10000);
+  // TableTestKit tester(sourceTable);
+  // tester.GenBenchmarkTab();
+  // tester.FillTable();
+
+  // SortTable sortedTable = sourceTable;
+  // sortedTable.SetSortMethod(Merge);
+
+  // // Замер эффективности сортировки
+  // int sortEfficiency = sortedTable.GetEfficiency(); // Получаем результат
+  // //
+  // TableTestKit sortedTester(sortedTable);
+  // sortedTester.FindRecord(); // Тест поиска
+  // sortedTester.DeleteRecord(); // Тест удаления
+  // sortedTester.AddMetric("Sorting Algorithm", sortedTable.GetSortMethodName());
+  // sortedTester.AddMetric("Sort Efficiency", std::to_string(sortEfficiency));
+  // sortedTester.PrintMetrics();
+  //
+  //
+
+  //
+  //
+  try {
+  ListHashTable hashTable(20000);
+  TableTestKit tester(hashTable);
+  tester.SetConfig(20000, 2, 5, "hash_benchmark.txt");
+  tester.GenBenchmarkTab();
+  tester.FillTable();
+  std::cout << "Records loaded: " << hashTable.GetDataCount() << std::endl;
+    std::cout << "Collisions: " << hashTable.GetCollisionCount() << std::endl;
+    std::cout << "Load factor: " << hashTable.GetLoadFactor() << std::endl;
+  
+  //tester.TestHashTablePerformance();
+  tester.FindRecord();
+  tester.DeleteRecord();
+  
+  tester.PrintMetrics();
+  
+            
+  } catch (const std::exception& e) {
+    std::cerr << "Error: " << e.what() << std::endl;
+}
+  return 0;
 }

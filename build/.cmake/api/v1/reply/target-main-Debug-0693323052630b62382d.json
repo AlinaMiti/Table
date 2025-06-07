@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "main"
+			"path" : "main.exe"
+		},
+		{
+			"path" : "main.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -66,12 +69,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "main",
-	"nameOnDisk" : "main",
+	"nameOnDisk" : "main.exe",
 	"paths" : 
 	{
 		"build" : ".",

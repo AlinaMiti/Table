@@ -13,8 +13,10 @@ public:
     Table(){_dataCount = 0; _efficientcy = 0;}
     virtual ~Table(){};
 
+
     size_t GetDataCount() const {return _dataCount;}
     int GetEfficiency() const {return _efficientcy;}
+    virtual void ResetEfficiency() { _efficientcy = 0; }
     bool IsEmpty() const {return _dataCount == 0;}
     virtual bool IsFull() const = 0;  //у каждого класса реализация своя
     virtual Key GetKey() const = 0;   //значение для текущей записи

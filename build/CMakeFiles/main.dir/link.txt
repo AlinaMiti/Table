@@ -1,1 +1,3 @@
-/usr/bin/g++-12 -g CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/TabRecord.cpp.o CMakeFiles/main.dir/ArrayTable.cpp.o CMakeFiles/main.dir/ScanTable.cpp.o CMakeFiles/main.dir/TableTestKit.cpp.o CMakeFiles/main.dir/ArrayHash.cpp.o CMakeFiles/main.dir/HashTable.cpp.o CMakeFiles/main.dir/ListHashTable.cpp.o CMakeFiles/main.dir/SortTable.cpp.o CMakeFiles/main.dir/TreeTable.cpp.o -o main 
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\main.dir/objects.a
+C:\Users\alina\Downloads\x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0\mingw64\bin\ar.exe qc CMakeFiles\main.dir/objects.a @CMakeFiles\main.dir\objects1.rsp
+C:\Users\alina\Downloads\x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\main.dir/objects.a -Wl,--no-whole-archive -o main.exe -Wl,--out-implib,libmain.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\main.dir\linkLibs.rsp

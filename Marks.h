@@ -20,5 +20,19 @@ public:
     virtual DatValue* GetCopy() override {
         return new Marks(_math, _physics, _sport, _psychology, _history);
     }
-
+    int GetMath() const{
+        return _math;
+    }
+    int GetPhysics()const{
+        return _physics;
+    }
+    int GetSport()const{
+        return _sport;
+    }
+    int GetPsychology()const{
+        return _psychology;
+    }
+    int GetHistory()const{
+        return _history;
+    }
 };
